@@ -1,0 +1,543 @@
+/*---------------------------------------------------------
+Restart
+---------------------------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none !important;
+    font-family: 'Roboto', sans-serif;
+}
+/*---------------------------------------------------------
+Global Css
+---------------------------------------------------------*/
+body,html{
+    width: 100%;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+/*---------------------------------------------------------
+Swiper
+---------------------------------------------------------*/
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+/*---------------------------------------------------------
+Header
+---------------------------------------------------------*/
+header{
+    height: 145px;
+}
+.headertop {
+    padding: 30px 0;
+}
+.headertop .col-12 .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.headertop .col-12 .content .search{
+    display: flex;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 30px;
+    padding: 3px 15px;
+}
+.headertop .col-12 .content .search .products{
+    position: relative;
+    margin-right: 20px;
+}
+.headertop .col-12 .content .search .products button{
+    background: transparent;
+    border: none;
+    outline: none;
+    font-weight:normal;
+    font-size: 22px;
+    cursor: pointer;
+}
+.headertop .col-12 .content .search .products button i{
+    margin-left: 10px;
+}
+.headertop .col-12 .content .search .products .productsopenmenu{
+    position: absolute;
+    top: 113%;
+    left: 0;
+    width: 180px;
+    background: white;
+    box-shadow: 0px 4px 9px -1px rgba(0,0,0,0.71);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 500ms;
+}
+.headertop .col-12 .content .search .products .productsopenmenu.active{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+.headertop .col-12 .content .search .products .productsopenmenu ul{
+    margin: 0;
+    padding: 0;
+    padding: 10px 15px;
+}
+.headertop .col-12 .content .search .products .productsopenmenu ul li{
+    margin: 5px 0;
+}
+.headertop .col-12 .content .search .products .productsopenmenu ul li a{
+    color: black;
+}
+.headertop .col-12 .content .search .searchinputdiv input{
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 500px;
+}
+.headertop .col-12 .content .search .searchbutton button{
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.headertop .col-12 .content .icons ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.headertop .col-12 .content .icons ul li{
+    margin: 0 10px;
+}
+.headertop .col-12 .content .icons ul li a{
+    color: black;
+    font-size: 25px;
+}
+.headerbottomfullcon{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    
+}
+.headerbottom{
+    padding: 0;
+}
+.headerbottom ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+
+}
+.headerbottom .col-lg-8 ul{
+    justify-content: space-between;
+}
+.headerbottom .col-lg-4 ul{
+    justify-content: space-evenly;
+    position: relative;
+}
+.headerbottom .col-lg-4 ul::before{
+    content: "";
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 80%;
+    background: black;
+}
+.headerbottom  ul li a{
+    color: black;
+}
+/*---------------------------------------------------------
+Banner
+---------------------------------------------------------*/
+.banner{
+    height: 500px;
+}
+.banner .container-fluid{
+    height: 100%;
+}
+.banner .container-fluid .row{
+    height: 100%;
+}
+.banner .container-fluid .row .col-12{
+    height: 100%;
+}
+/*---------------------------------------------------------
+products
+---------------------------------------------------------*/
+.products .topcol{
+    padding-top: 30px;
+}
+.products .topcol button{
+    border: none;
+    outline: none;
+    width: 200px;
+    height: 50px;
+    color: black;
+    background: rgb(92, 236, 92);
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    border-radius: 5px;
+}
+.products .topcol button i{
+    margin-right: 15px;
+    margin-left: 10px;
+}
+.products .toptextcol{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.products .toptextcol a{
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
+}
+.products .toptextcol a i{
+    margin-left: 5px;
+}
+.products img{
+    width: 100%;
+    height: 100%;
+}
+.products .productsdiv .col-12 {
+    margin-top: 20px;
+}
+.products .productsdiv .col-12 .imgdiv{
+    position: relative;
+}
+.products .productsdiv .col-12 .imgdiv .hovermenu{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    visibility: hidden;
+    transform: translateX(30px);
+    opacity: 0;
+    transition: all 400ms;
+}
+.products .productsdiv .col-12:hover .imgdiv .hovermenu{
+    visibility: visible;
+    transform: translateX(0);
+    opacity: 1;
+}
+.products .productsdiv .col-12 .imgdiv .hovermenu ul{
+    margin: 0;
+    padding: 0;
+}
+.products .productsdiv .col-12 .imgdiv .hovermenu ul li{
+    width: 30px;
+    height: 30px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    position: relative;
+}
+.products .productsdiv .col-12 .imgdiv .hovermenu ul li a{
+    color: black;
+    font-size: 18px;
+}
+.products .productsdiv .col-12 .imgdiv .hovermenu ul li:nth-child(1){
+    margin: 0;
+}
+.products .productsdiv .col-12 .imgdiv .hovermenu ul li p{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 130%;
+    top: 50%;
+    transform: translate(20px,-50%);
+    background: white;
+    height: 100%;
+    padding: 0 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 300ms;
+}
+.products .productsdiv .col-12 .imgdiv .hovermenu ul li p::before{
+    content: "";
+    position: absolute;
+    top: 35%;
+    transform:  rotate(45deg);
+    right: -4px;
+    width: 10px;
+    height: 10px;
+    background: white;
+    
+}
+.products .productsdiv .col-12 .imgdiv .hovermenu ul li:hover p{
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0px,-50%);
+
+}
+.products .productsdiv .col-12 .text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.products .productsdiv .col-12 .text .left h3{
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+}
+.products .productsdiv .col-12 .text .left p{
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+}
+.products .productsdiv .col-12 .text .right > p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: black;
+    font-size: 19px;
+    text-align: end;
+}
+.products .productsdiv .col-12 .text .right .discount{
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+}
+.products .productsdiv .col-12 .text .right .discount.active{
+    visibility: visible;
+}
+.products .productsdiv .col-12 .text .right .discount p{
+    margin: 0;
+    padding: 0;
+    color: rgb(90, 219, 90);
+}
+.products .productsdiv .col-12 .text .right .discount p:nth-child(1){
+    position: relative;
+    margin-right: 10px;
+}
+.products .productsdiv .col-12 .text .right .discount p:nth-child(1)::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 1px;
+    width: 100%;
+    background: rgb(90, 219, 90);
+}
+/*---------------------------------------------------------
+topcategories
+---------------------------------------------------------*/
+.topcategories{
+    margin-top: 50px;
+}
+.topcategories .TopText h3{
+    font-size: 35px;
+}
+.topcategories img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.topcategories .col-lg-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: .6;
+    transition: all 300ms;
+}
+.topcategories .col-lg-2:hover{
+    opacity: 1;
+}
+.topcategories .imgdiv{
+    border-radius: 50%;
+    overflow: hidden;
+    width: 160px;
+    height: 150px;
+}
+.topcategories .col-lg-2 .textdiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.topcategories .col-lg-2 .textdiv p{
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    
+}
+/*---------------------------------------------------------
+PopularSearches
+---------------------------------------------------------*/
+.PopularSearches {
+    margin-top: 40px;
+}
+.PopularSearches .TopText h3{
+    font-size: 35px;
+}
+.PopularSearches .col-lg-3{
+    margin-top: 10px;
+}
+.PopularSearches .col-lg-3 a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 5px 8px;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    border: 1px solid black;
+    transition: all 300ms;
+}
+.PopularSearches .col-lg-3 a:hover{
+    background: black;
+    color: white;
+}
+/*---------------------------------------------------------
+Footer
+---------------------------------------------------------*/
+footer{
+    padding:  30px 0;
+    margin-top: 50px;
+    background: rgb(226, 226, 226);
+}
+footer .footertop{
+    border-bottom: 1px solid gray;
+}
+footer .footertop .col-12{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+footer .footertop .col-12 .socialmedias ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer .footertop .col-12 .socialmedias ul li{
+    margin: 0 10px;
+}
+footer .footertop .col-12 .socialmedias ul li a{
+    font-size: 30px;
+    color: black;
+}
+footer .footermiddle{
+    padding: 30px 0;
+    border-bottom: 1px solid gray;
+}
+footer .footermiddle .leftcol h4{
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    text-decoration: underline !important;
+}
+footer .footermiddle .col-lg-2 ul{
+    margin: 0;
+    padding: 0;
+}
+footer .footermiddle h3{
+    font-weight: bold;
+}
+footer .footermiddle .col-lg-2 ul li{
+    margin: 5px 0;
+    transition: all 300ms;
+}
+footer .footermiddle .col-lg-2 ul li:hover{
+    transform: translateX(10px);
+}
+footer .footermiddle .col-lg-2 ul li a{
+    color: black;
+    font-size: 20px;
+}
+footer .footerbottom .col-12{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 20px;
+}
+footer .footerbottom .col-12 ul{
+    display: flex;
+    align-items: center;
+}
+footer .footerbottom .col-12 ul li{
+    margin: 0 15px;
+}
+footer .footerbottom .col-12 ul a{
+    color: gray;
+    text-decoration: underline !important;
+}
+
+/*---------------------------------------------------------
+Medias
+---------------------------------------------------------*/
+@media (max-width:992px){
+    .headertop{
+        display: none;
+    }
+    .headerbottomfullcon{
+        display: none;
+    }
+    footer .footermiddle .col-lg-2{
+        margin-top: 10px;
+    }
+}
+@media (max-width:640px){
+    footer .footerbottom .col-12 ul{
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+    }
+    footer .footerbottom .col-12 ul li{
+        width: 40%;
+        margin: 10px 5px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    footer .footerbottom .col-12 ul li a{
+        display: flex;
+        align-items: center;
+
+        width: 100%;
+        font-size: 15px;
+        text-align: start;
+    }
+}
