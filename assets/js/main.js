@@ -37,3 +37,22 @@ filtersBTN.addEventListener('click' , (e) => {
     }
 
 })
+
+
+const allproductsBTNmob = document.querySelector('#allproductsBTNmob');
+const productsopenmenumobile = document.querySelector('.productsopenmenumobile');
+
+allproductsBTNmob.addEventListener('click' , (e) => {
+    productsopenmenumobile.classList.toggle('active');
+})
+
+const hamburgerbuttonopen = document.querySelector('.hamburgericondiv button');
+const hamburgerbuttonclose = document.querySelector('.hamburgericonclosediv button');
+const mobileopenmenu = document.querySelector('.mobileopenmenu');
+
+hamburgerbuttonopen.addEventListener('click' , (e) => {
+    mobileopenmenu.classList.add('active');
+})
+hamburgerbuttonclose.addEventListener('click' , (e) => {
+    mobileopenmenu.classList.remove('active');
+})
