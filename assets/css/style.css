@@ -226,9 +226,91 @@ products
 .products .toptextcol a i{
     margin-left: 5px;
 }
+.products .maincontentcol{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.products .filterdiv{
+    margin-top: 10px;
+    padding-right: 10px;
+}
+.products .filterdiv .TopMainText{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.products .filterdiv .TopMainText button{
+    background: transparent;
+    color: green;
+    border: none;
+    outline: none;
+    font-weight: bold;
+}
+.products .filterdiv ul{
+    margin: 0;
+    padding: 0;
+}
+
+.products .filterdiv .categories ul li a{
+    color: black;
+    font-size: 18px;
+}
+.products .filterdiv .content .TopMainText{
+    margin: 0  !important;
+}
+.products .filterdiv .content div:not(:nth-child(2)){
+    margin-top: 30px;
+}
+.products .filterdiv div ul li{
+    margin: 5px 0;
+}
+.products .filterdiv div ul li input{
+    width: 10px;
+    height: 10px;
+}
+.products .filterdiv div ul li a{
+    color: black;
+    font-size: 17px;
+}
+.products .filterdiv div ul li button{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: rgb(45, 230, 45);
+    font-weight: bold;
+}
+.products .filterdiv .clearallfilters{
+    margin-top: 30px;
+}
+.products .filterdiv .clearallfilters button{
+    border: none;
+    outline: none;
+    display: flex;
+    width: 100%;
+    height: 40px;
+    background: rgb(228, 228, 228);
+    color: rgb(32, 241, 32);
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .products img{
     width: 100%;
     height: 100%;
+}
+.products .maincontentcol.active .productsdiv{
+    width: 90%;
+    margin-top: 40px;
+}
+.products .filterdiv{
+    display: none;
+    width: 25%;
+}
+.products .maincontentcol.active .filterdiv{
+    display: inline-block;
 }
 .products .productsdiv .col-12 {
     margin-top: 20px;
@@ -517,6 +599,15 @@ Medias
     }
     footer .footermiddle .col-lg-2{
         margin-top: 10px;
+    }
+    .products .maincontentcol{
+        flex-direction: column;
+    }
+    .products .maincontentcol.active .productsdiv{
+        width: 100%;
+    }
+    .products .maincontentcol.active .filterdiv{
+        width: 100%;
     }
 }
 @media (max-width:640px){
