@@ -27,7 +27,16 @@ function Filter () {
         }
     }
 }
+let open = true;
 filtersBTN.addEventListener('click' , (e) => {
+    if(open == true){
+        filtersBTN.innerHTML = '<i class="fas fa-times"></i> Close';
+        open = false;
+    }
+    else if(open == false){
+        filtersBTN.innerHTML = '<i class="fas fa-sliders-h"></i> Filters';
+        open =true;
+    }
     if(window.innerWidth > 992){
         maincontentcol.classList.toggle('active')
         Filter();
