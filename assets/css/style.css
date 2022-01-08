@@ -313,8 +313,9 @@ mobileheader
 .mobileheader .content .bottomcontent .searchinputdiv{
     display: flex;
     align-items: center;
-    border-bottom: 3px solid black;
+    border: 1px solid black;
     padding: 3px 15px;
+    border-radius: 30px;
 
 }
 .mobileheader .content .bottomcontent .searchinputdiv input{
