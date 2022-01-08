@@ -499,6 +499,8 @@ products
     margin: auto;
     transform: translate(0.3px, -1px);
     width: 110%;
+    box-shadow: 1px 0px 1px 2px transparent;
+
 
 }
 .products .toptextcol a{
@@ -609,6 +611,10 @@ products
 }
 .products .productsdiv .container-fluid:hover .toptextcol{
     background: #a6eaca;
+    box-shadow: 1px 0px 1px 2px #a6eaca;
+}
+.products .productsdiv .container-fluid:hover .toptextcol a{
+    color: black;
 }
 .products .productsdiv .container-fluid{
     margin-top: 20px;
