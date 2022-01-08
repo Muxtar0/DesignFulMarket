@@ -762,6 +762,8 @@
                             <div class="swiper-slide"><img src="https://cdnb.artstation.com/p/assets/images/images/032/814/645/medium/himangshu-baruah-mountain-no-displacement.jpg?1607542549" alt=""></div>
                             <div class="swiper-slide"><img src="https://cdnb.artstation.com/p/assets/images/images/032/814/645/medium/himangshu-baruah-mountain-no-displacement.jpg?1607542549" alt=""></div>
                         </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
                     </div>
                 </div>
             </div>
@@ -1857,7 +1859,12 @@
     <script src="assets/js/main.js"></script>
     <!-- Initialize Swiper -->
     <script>
-        var swiper = new Swiper(".mySwiper", {});
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        });
     </script>
     <!-- Scripts end -->
 </body>

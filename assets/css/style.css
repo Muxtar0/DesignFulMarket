@@ -22,6 +22,7 @@ Swiper
 .swiper {
     width: 100%;
     height: 100%;
+    position: relative;
   }
 
   .swiper-slide {
@@ -50,11 +51,14 @@ Swiper
     height: 100%;
     object-fit: cover;
   }
+  .swiper-button-prev, .swiper-button-next{
+      color: #a6eaca !important;
+  }
 /*---------------------------------------------------------
 Header
 ---------------------------------------------------------*/
 header{
-    height: 145px;
+    height: 143px;
 }
 .headertop {
     padding: 30px 0;
@@ -148,7 +152,16 @@ header{
     display: flex;
 }
 .headertop .col-12 .content .icons ul li{
-    margin: 0 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all 300ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.headertop .col-12 .content .icons ul li:hover{
+    background: rgb(212, 212, 212);
 }
 .headertop .col-12 .content .icons ul li a{
     color: black;
@@ -450,12 +463,8 @@ Banner
 /*---------------------------------------------------------
 products
 ---------------------------------------------------------*/
-.products{
-    transition: all 300ms;
-}
-.products:hover{
-    background: #a6eaca;
-}
+
+
 .products .topcol{
     padding-top: 30px;
 }
@@ -576,6 +585,16 @@ products
 }
 .products .maincontentcol.active .filterdiv{
     display: inline-block;
+}
+.products .productsdiv .container-fluid{
+    border: 3px solid transparent;
+    transition: all 300ms;
+}
+.products .productsdiv .container-fluid:nth-child(1){
+    margin-top: 10px;
+}
+.products .productsdiv .container-fluid:hover{
+    border-color: #a6eaca;
 }
 .products .productsdiv .col-12 {
     margin-top: 20px;
