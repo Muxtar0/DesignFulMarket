@@ -450,6 +450,12 @@ Banner
 /*---------------------------------------------------------
 products
 ---------------------------------------------------------*/
+.products{
+    transition: all 300ms;
+}
+.products:hover{
+    background: #a6eaca;
+}
 .products .topcol{
     padding-top: 30px;
 }
