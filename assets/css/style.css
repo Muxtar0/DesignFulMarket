@@ -69,7 +69,7 @@ header{
     align-items: center;
     border: 1px solid gray;
     border-radius: 30px;
-    padding: 3px 15px;
+    padding-left: 15px;
 }
 .headertop .col-12 .content .search .products{
     position: relative;
@@ -120,11 +120,27 @@ header{
     border: none;
     outline: none;
     width: 500px;
+
+}
+.headertop .col-12 .content .search .searchbutton{
+    height: 37px;
+    display: flex;
+    border-radius: 0 30px 30px 0;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    transition: all 300ms;
+    background: transparent;
 }
 .headertop .col-12 .content .search .searchbutton button{
     background: transparent;
     border: none;
     outline: none;
+
+
+}
+.headertop .col-12 .content .search .searchbutton:hover{
+    background: #a6eaca;
 }
 .headertop .col-12 .content .icons ul{
     margin: 0;
