@@ -65,3 +65,27 @@ hamburgerbuttonopen.addEventListener('click' , (e) => {
 hamburgerbuttonclose.addEventListener('click' , (e) => {
     mobileopenmenu.classList.remove('active');
 })
+
+
+const populardivmob = document.querySelector('.mobileheader .popularsmob');
+const populardiv = document.querySelector('.headertop .populars');
+document.addEventListener('click' , (e) => {
+    if(e.target.classList.contains('searchinputdiv') || e.target.classList.contains('searchbutton') || e.target.classList.contains('searchinput') || e.target.classList.contains('searchBTN')){
+        populardiv.classList.add('active')
+        populardivmob.classList.add('active')
+    }
+    else{
+        populardiv.classList.remove('active')
+        populardivmob.classList.remove('active')
+    }
+})
+
+const fliterdivopendownmenubtns = document.querySelectorAll('.filterdiv .opendownmenu');
+
+for(let i = 0 ; i < fliterdivopendownmenubtns.length;i++){
+    fliterdivopendownmenubtns[i].addEventListener('click' , (e) => {
+        fliterdivopendownmenubtns[i].classList.toggle('deactive');
+        fliterdivopendownmenubtns[i].parentElement.querySelector('ul').classList.toggle('deactive');
+
+    })
+}

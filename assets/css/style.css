@@ -78,6 +78,47 @@ header{
     border: 1px solid gray;
     border-radius: 30px;
     padding-left: 15px;
+    position: relative;
+}
+.headertop .col-12 .content .search .populars{
+    position: absolute;
+    left: 0;
+    top: 120%;
+    width: 100%;
+    height: auto;
+    background: white;
+    box-shadow: 0 4px 20px rgb(34 34 34 / 15%);
+    border-radius: 10px;
+    z-index: 1000;
+    padding: 18px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-10px,-10px);
+}
+.headertop .col-12 .content .search .populars.active{
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0,0);
+}
+.headertop .col-12 .content .search .populars .contentpopular h3{
+    font-size: 20px;
+}
+.headertop .col-12 .content .search .populars .contentpopular ul{
+    margin: 0;
+    padding: 0;
+}
+.headertop .col-12 .content .search .populars .contentpopular ul li{
+    margin: 3px 0;
+}
+.headertop .col-12 .content .search .populars .contentpopular ul li a{
+    display: flex;
+    width: 100%;
+    color: black;
+    transition: all 300ms;
+}
+.headertop .col-12 .content .search .populars .contentpopular ul li a:hover{
+    color: #a6eaca;
+    transform: translateX(5px);
 }
 .headertop .col-12 .content .search .products{
     position: relative;
@@ -210,10 +251,23 @@ header{
 .headerbottom  ul li{
     position: relative;
 }
+.headerbottom  ul li::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: #a6eaca;
+    transition: all 300ms;
+}
+.headerbottom  ul li:hover::before{
+    width: 100%;
+}
 .headerbottom  ul li .header__nav-dropdown-menu{
     position: absolute;
     
-    top: 124%;
+    top: 115%;
     flex-direction: row;
     width: auto;
     height: auto;
@@ -314,6 +368,9 @@ mobileheader
     color: black;
     font-size: 28px;
 }
+.mobileheader .content .bottomcontent{
+    position: relative;
+}
 .mobileheader .content .bottomcontent .searchinputdiv{
     display: flex;
     align-items: center;
@@ -322,12 +379,58 @@ mobileheader
     border-radius: 30px;
 
 }
+.mobileheader .content .bottomcontent  .populars{
+    position: absolute;
+    left: 0;
+    top: 120%;
+    width: 100%;
+    height: auto;
+    background: white;
+    box-shadow: 0 4px 20px rgb(34 34 34 / 15%);
+    border-radius: 10px;
+    z-index: 1000;
+    padding: 18px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-10px,-10px);
+
+}
+.mobileheader .content .bottomcontent  .populars.active{
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0,0);
+}
+.mobileheader .content .bottomcontent  .populars .contentpopular h3{
+    font-size: 20px;
+}
+.mobileheader .content .bottomcontent  .populars .contentpopular ul{
+    margin: 0;
+    padding: 0;
+}
+.mobileheader .content .bottomcontent  .populars .contentpopular ul li{
+    margin: 3px 0;
+}
+.mobileheader .content .bottomcontent  .populars .contentpopular ul li a{
+    display: flex;
+    width: 100%;
+    color: black;
+    transition: all 300ms;
+}
+.mobileheader .content .bottomcontent  .populars .contentpopular ul li a:hover{
+    color: #a6eaca;
+    transform: translateX(5px);
+}
 .mobileheader .content .bottomcontent .searchinputdiv input{
     background: transparent;
     border: none;
     outline: none;
     width: 300px;
     margin-right: 10px;
+}
+.mobileheader .content .bottomcontent .searchinputdiv button{
+    background: transparent;
+    border: none;
+    outline: none;
 }
 /*---------------------------------------------------------
 mobileopenmenu
@@ -536,7 +639,27 @@ products
     margin: 0;
     padding: 0;
 }
-
+.products .filterdiv div:not(:nth-child(1)) button.opendownmenu{
+    background: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 25px;
+    font-weight: bold;
+}
+.products .filterdiv div:not(:nth-child(1)) button.opendownmenu i{
+    font-size: normal;
+    transition: all 300ms;
+}
+.products .filterdiv div:not(:nth-child(1)) button.opendownmenu.deactive i{
+    transform: rotate(-90deg);
+}
+.products .filterdiv ul.deactive{
+    display: none;
+}
 .products .filterdiv .categories ul li a{
     color: black;
     font-size: 18px;
