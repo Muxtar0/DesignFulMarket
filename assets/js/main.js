@@ -66,19 +66,29 @@ hamburgerbuttonclose.addEventListener('click' , (e) => {
     mobileopenmenu.classList.remove('active');
 })
 
-
-const populardivmob = document.querySelector('.mobileheader .popularsmob');
-const populardiv = document.querySelector('.headertop .populars');
+const searchbutton = document.querySelector('.searchbutton')
 document.addEventListener('click' , (e) => {
-    if(e.target.classList.contains('searchinputdiv') || e.target.classList.contains('searchbutton') || e.target.classList.contains('searchinput') || e.target.classList.contains('searchBTN')){
-        populardiv.classList.add('active')
-        populardivmob.classList.add('active')
+    if(e.target.classList.contains('searchinputdiv') || e.target.classList.contains('searchinput') ){
+        searchbutton.classList.add('active');
     }
     else{
-        populardiv.classList.remove('active')
-        populardivmob.classList.remove('active')
+        console.log('not work')
+        searchbutton.classList.remove('active')
     }
 })
+
+// const populardivmob = document.querySelector('.mobileheader .popularsmob');
+// const populardiv = document.querySelector('.headertop .populars');
+// document.addEventListener('click' , (e) => {
+//     if(e.target.classList.contains('searchinputdiv') || e.target.classList.contains('searchbutton') || e.target.classList.contains('searchinput') || e.target.classList.contains('searchBTN')){
+//         populardiv.classList.add('active')
+//         populardivmob.classList.add('active')
+//     }
+//     else{
+//         populardiv.classList.remove('active')
+//         populardivmob.classList.remove('active')
+//     }
+// })
 
 const fliterdivopendownmenubtns = document.querySelectorAll('.filterdiv .opendownmenu');
 
